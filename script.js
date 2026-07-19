@@ -35,7 +35,12 @@ const LOOK_DIRECTIONS = [
   { angle: 337.5, label: "Up-left", row: 10, col: 7 },
 ];
 
+const isWidgetMode = new URLSearchParams(location.search).has("widget");
+document.body.classList.toggle("widget-mode", isWidgetMode);
+document.documentElement.classList.toggle("widget-mode-html", isWidgetMode);
+
 const stage = document.getElementById("sprite-stage");
+const widgetStage = document.getElementById("widget-stage");
 const stateLabel = document.getElementById("state-label");
 const buttonsContainer = document.getElementById("state-buttons");
 const compass = document.getElementById("compass");
@@ -49,7 +54,9 @@ let timer = null;
 function renderFrame() {
   const x = currentFrame * FRAME_WIDTH;
   const y = currentState.row * FRAME_HEIGHT;
-  stage.style.backgroundPosition = `-${x}px -${y}px`;
+  const position = `-${x}px -${y}px`;
+  stage.style.backgroundPosition = position;
+  widgetStage.style.backgroundPosition = position;
 }
 
 function setState(state) {

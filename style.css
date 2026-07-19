@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+html.widget-mode-html {
+  background: transparent;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -120,6 +124,30 @@ h2 {
   image-rendering: pixelated;
   width: 192px;
   height: 208px;
+  transform: scale(2);
+}
+
+.widget-stage {
+  display: none;
+}
+
+body.widget-mode {
+  background: transparent;
+  overflow: hidden;
+  width: 384px;
+  height: 416px;
+}
+
+body.widget-mode .page-shell {
+  display: none;
+}
+
+body.widget-mode .widget-stage {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform-origin: top left;
   transform: scale(2);
 }
 
