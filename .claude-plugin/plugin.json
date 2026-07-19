@@ -1,0 +1,13 @@
+{
+  "name": "chonky-cat-pet",
+  "displayName": "Chonky Cat Pet",
+  "version": "1.0.0",
+  "description": "A floating desktop cat that sits in the corner of your screen and waves when Claude finishes responding",
+  "author": {
+    "name": "Sushrutkun"
+  },
+  "repository": "https://github.com/Sushrutkun/chonky-cat-pet-claude",
+  "license": "MIT",
+  "keywords": ["pet", "widget", "desktop", "fun"],
+  "hooks": "./hooks/hooks.json"
+}

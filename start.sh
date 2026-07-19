@@ -3,9 +3,6 @@ set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-echo "Starting Chonky Cat server (Docker)..."
-docker compose up -d --build
-
 echo "Starting floating overlay (Electron)..."
 cd desktop-overlay
 if [ ! -d node_modules ]; then

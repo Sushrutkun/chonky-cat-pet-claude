@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curl -s -m 1 -X POST http://localhost:8420/react -H 'Content-Type: application/json' -d '{\"state\":\"waving\"}' -o /dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}

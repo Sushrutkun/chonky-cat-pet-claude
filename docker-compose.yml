@@ -1,6 +1,0 @@
-services:
-  chonky-cat:
-    build: .
-    ports:
-      - "8420:80"
-    restart: unless-stopped

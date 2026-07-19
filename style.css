@@ -10,6 +10,7 @@
   --accent-dark: #7b3515;
   --ink: #111827;
   --green: #34745b;
+  --widget-scale: 2;
 }
 
 * {
@@ -134,8 +135,8 @@ h2 {
 body.widget-mode {
   background: transparent;
   overflow: hidden;
-  width: 384px;
-  height: 416px;
+  width: calc(192px * var(--widget-scale));
+  height: calc(208px * var(--widget-scale));
 }
 
 body.widget-mode .page-shell {
@@ -148,7 +149,7 @@ body.widget-mode .widget-stage {
   left: 0;
   top: 0;
   transform-origin: top left;
-  transform: scale(2);
+  transform: scale(var(--widget-scale));
 }
 
 .direction-layout {

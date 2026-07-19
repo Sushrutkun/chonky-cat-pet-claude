@@ -87,6 +87,29 @@ STATES.forEach((state) => {
 setState(STATES[0]);
 timer = setInterval(tick, 1000 / FPS);
 
+let playOnceReturnState = null;
+
+function playOnce(stateKey) {
+  const state = STATES.find((s) => s.key === stateKey);
+  if (!state || state === currentState) return;
+
+  playOnceReturnState = playOnceReturnState || currentState;
+  setState(state);
+
+  setTimeout(() => {
+    const returnState = playOnceReturnState;
+    playOnceReturnState = null;
+    setState(returnState);
+  }, (state.frames * 1000) / FPS);
+}
+
+if (isWidgetMode && window.chonkyCat) {
+  window.chonkyCat.onReact(playOnce);
+  window.chonkyCat.onSetScale((scale) => {
+    document.documentElement.style.setProperty("--widget-scale", scale);
+  });
+}
+
 function setLookDirection(direction) {
   const x = direction.col * FRAME_WIDTH;
   const y = direction.row * FRAME_HEIGHT;

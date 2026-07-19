@@ -1,0 +1,15 @@
+{
+  "name": "chonky-cat-pet-claude",
+  "owner": {
+    "name": "Sushrutkun"
+  },
+  "description": "A floating desktop cat pet for Claude Code",
+  "plugins": [
+    {
+      "name": "chonky-cat-pet",
+      "source": "./",
+      "description": "A floating desktop cat that sits in the corner of your screen and waves when Claude finishes responding",
+      "version": "1.0.0"
+    }
+  ]
+}
