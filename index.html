@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chonky Cat</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Claude Code companion</p>
+        <h1>Chonky Cat</h1>
+        <p class="lede">
+          A sleepy, chubby orange tabby that mostly naps but still reacts
+          when there's work to do. Pick a state below and watch it go.
+        </p>
+        <div class="status-row" aria-label="Pet status">
+          <span id="state-label">idle</span>
+          <span>8-frame loop</span>
+        </div>
+      </div>
+      <div class="preview-panel">
+        <div id="sprite-stage" class="sprite-stage" role="img" aria-label="Chonky Cat animation"></div>
+      </div>
+    </section>
+
+    <section class="content-grid" aria-label="Pet controls and reference">
+      <div class="controls-panel">
+        <h2>States</h2>
+        <div id="state-buttons" class="state-buttons"></div>
+      </div>
+
+      <div class="direction-panel">
+        <h2>Look Direction</h2>
+        <div class="direction-layout">
+          <div id="compass" class="compass" role="group" aria-label="Look direction compass"></div>
+          <div class="look-preview">
+            <div class="look-stage-frame">
+              <div id="look-stage" class="sprite-stage look-stage" role="img" aria-label="Chonky Cat look direction"></div>
+            </div>
+            <span id="look-label">Up (0°)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
