@@ -8,6 +8,5 @@
   },
   "repository": "https://github.com/Sushrutkun/chonky-cat-pet-claude",
   "license": "MIT",
-  "keywords": ["pet", "widget", "desktop", "fun"],
-  "hooks": "./hooks/hooks.json"
+  "keywords": ["pet", "widget", "desktop", "fun"]
 }
